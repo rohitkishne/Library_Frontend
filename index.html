@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/library.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&family=Libre+Baskerville&family=M+PLUS+1&family=PT+Serif&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-Heading">
+                <h1><a href="#">Library</a></h1>
+            </div>
+            <div class="nav-links">
+                <a href="#table">Books</a>
+                <a href="#registration">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section-1 : for table -->
+    <section id="table">
+        <div class="table-container">
+            <h1>Books</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Availability.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <table class="nestedTable">
+                                <tr><th>Book Title : Rich Dad Poor Dad</th></tr>
+                                <tr><td>Publication Date: 1997</td></tr>
+                                <tr><td>Page Count: 352</td></tr>
+                                <tr><td>ISBN: 9781612680194</td></tr>
+                            </table>
+                        </td>
+                        <td>Robert T. Kiyosaki</td>
+                        <td>Non-Fiction</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <table class="nestedTable">
+                                <tr><th>Book Title : The Kite Runner</th></tr>
+                                <tr><td>Publication Date: 2003</td></tr>
+                                <tr><td>Page Count: 368</td></tr>
+                                <tr><td>ISBN: 9781526634054</td></tr>
+                            </table>
+                        </td>
+                        <td>Khaled Hosseini</td>
+                        <td>Fiction</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <table class="nestedTable">
+                                <tr><th>Book Title : The Rudest Book Ever</th></tr>
+                                <tr><td>Publication Date: 2019</td></tr>
+                                <tr><td>Page Count: 213</td></tr>
+                                <tr><td>ISBN: 9789388754439</td></tr>
+                            </table>
+                        </td>
+                        <td>Shwetabh Gangwar</td>
+                        <td>Self-help book</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <table class="nestedTable">
+                                <tr><th>Book Title : The Alchemist</th></tr>
+                                <tr><td>Publication Date: 1988</td></tr>
+                                <tr><td>Page Count: 208</td></tr>
+                                <tr><td>ISBN: 9780062416216</td></tr>
+                            </table>
+                        </td>
+                        <td>Paulo Coelho</td>
+                        <td>Adventure Fiction</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <table class="nestedTable">
+                                <tr><th>Book Title : See You At the Top</th></tr>
+                                <tr><td>Publication Date: 1975</td></tr>
+                                <tr><td>Page Count: 384</td></tr>
+                                <tr><td>ISBN: 9781455611805</td></tr>
+                            </table>
+                        </td>
+                        <td>Zig Ziglar</td>
+                        <td>Self-help book</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section-2: for Registration form -->
+    <section id="registration">
+        <div class="register">
+            <h1>Register</h1>
+            <form class="form" action="#" method="post">
+                <div  class="input">
+                    <label for="fname">First name</label><br>
+                    <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" required>
+                </div>
+                <div class="input">
+                    <label for="lname">Last name</label><br>
+                    <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" required>
+                </div>
+                <div class="input">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email-ID" required>
+                </div>
+                <div class="input">
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+                <div class="input">
+                    <label for="age">Age</label><br>
+                    <input type="number" min="5" max="100" name="age" id="age" required>
+                    <p><b>Note : Age should be between 5 and 100.</b></p>
+                </div>
+                <div class="input">
+                    <label for="password">Password</label><br>
+                    <input type="password" min="5" max="100" name="password" id="password" placeholder="Enter Your Password" required>
+                </div>
+                <div class="input">
+                    <label for="confirm_password">Confirm Password</label><br>
+                    <input type="password" min="5" max="100" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required oninput="check(this)">
+                </div>
+
+                <div>
+                    <button class="btn" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- validation for checking password and confirm_password -->
+    <script language='javascript' type='text/javascript'>
+        function check(input) {
+          if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+          } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+          }
+        }
+      </script>
+</body>
+</html>
